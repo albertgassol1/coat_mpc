@@ -1,0 +1,13 @@
+torch<2.0
+numpy==1.22.2
+botorch==0.6.4
+GPy==1.10.0
+scipy==1.3.3
+tf2_ros
+roslaunch
+rosnode
+rospkg
+matplotlib
+PyYAML
+tk
+gpytorch==1.6.0
