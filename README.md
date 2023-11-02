@@ -1,6 +1,8 @@
+# Code coming soon
+
 # Performamce-driven Safe Explration for MPC tuning in autonomous racing
 
-This repository contains a python ROS library that implements SafeOpt algorithm for tuning the cost function weights of a Model Predictive Controller (MPC) for an autonomous system. The code uses ROS (Robot Operating System) to communicate with the MPC via dynamic reconfigure. The goal is to minimize the lap time while ensuring that it will always be below a certain given threshold. Furthermore, other classical Bayesian Optimization methods such as Upper Confidence Bounds (UCB) and Constrained Expected Improvement (EIC) are available.
+This repository contains a Python ROS library that implements Coat-MPC to tune the cost function weights of a Model Predictive Controller (MPC) for an autonomous system. The code uses ROS (Robot Operating System) to communicate with the MPC via dynamic reconfigure. The goal is to minimize the lap time while ensuring that it will always be below a certain threshold. Furthermore, other classical Bayesian Optimization methods such as Upper Confidence Bounds (UCB) and Constrained Expected Improvement (EIC) are available.
 
 This library was developed and used to tune the cost function weights of AMZ's driverless racing car.
 
