@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Launch autotuner node-->
+    <!-- <param name="use_sim_time" value="true"/> -->
+    <node pkg="ros_cbo" type="main.py" name="ros_cbo" output="screen" launch-prefix=""/>
+</launch>

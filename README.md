@@ -1,8 +1,6 @@
-# Code coming soon
-
 # Performamce-driven Safe Explration for MPC tuning in autonomous racing
 
-This repository contains a Python ROS library that implements Coat-MPC to tune the cost function weights of a Model Predictive Controller (MPC) for an autonomous system. The code uses ROS (Robot Operating System) to communicate with the MPC via dynamic reconfigure. The goal is to minimize the lap time while ensuring that it will always be below a certain threshold. Furthermore, other classical Bayesian Optimization methods such as Upper Confidence Bounds (UCB) and Constrained Expected Improvement (EIC) are available.
+This repository contains a Python ROS library that implements Coat-MPC to tune the cost function weights of a Model Predictive Controller (MPC) for an autonomous system. The code uses ROS (Robot Operating System) to communicate with the MPC via dynamic reconfigure. The goal is to minimize the lap time while ensuring that it will always be below a certain threshold. The code of Coat-MPC reuses parts of the code os SafeOpt (https://github.com/befelix/SafeOpt). Furthermore, other methods such as Upper Confidence Bounds (UCB), Constrained Expected Improvement (EIC), Confidence Region BO (code resused from https://github.com/boschresearch/ConfidenceRegionBO), Weighted Maximum Likelihood (WML) and Metropolis-Hastings (MH).
 
 This library was developed and used to tune the cost function weights of AMZ's driverless racing car.
 
@@ -10,13 +8,13 @@ Furthermore, it has been tested with a modified version of the  CRS framework: [
 framework for single and multi-agent robotics and control](https://arxiv.org/pdf/2209.12048.pdf) . This framework includes an open source simulator, estimator and MPCC, besides many other functionalities. Code available here: https://gitlab.ethz.ch/ics/crs.
 
 ## Requirements
-1. ROS (Tested on version Noetic)
+1. [ROS](https://wiki.ros.org/noetic) (Tested on version Noetic)
 
 2. Python packages (see ```requirements.txt```)
 
 3. This library assumes that the user has an MPC implementation with a [dynamic reconfigure](http://wiki.ros.org/dynamic_reconfigure) client that can be used to change its parameters in an online manner. For an MPCC implementation (no dynamic reconfigure) check https://github.com/alexliniger/MPCC or the CRS implementation.
 
-4. This library assumes that racing simulator is available. The simulator or a trajectory optimizer must provide information about the track center. For a racing car simulator implementation check https://github.com/AMZ-Driverless/fssim or the CRS implementation.. 
+4. This library assumes that racing simulator is available. The simulator or a trajectory optimizer must provide information about the track center. For a racing car simulator implementation check https://github.com/AMZ-Driverless/fssim or the CRS implementation.
 
 5. All tests have been performed in an environment where the track is known beforehand (Trackdrive/Skidpad dissiplines in Formula Student Driverless). 
 
@@ -40,13 +38,14 @@ Make sure that the ROS environment is set up and that the ROS master is running.
 
 Include this package into your ROS workspace. Build everything and run:
 ```bash
-roslaunch ros_cbo autotuner-sim.launch
+roslaunch ros_cbo autotuner.launch
 ```
 
 The code will start communicating with the MPC via dynamic reconfigure and start tuning the cost function weights.
-The optimal laptimes and parameters will be saved in a folder inside ```visualization/objects```. You can use the visualization scripts to bvisualize the data.
-
+The optimal laptimes and parameters will be saved in a folder inside ```visualization/objects```.
 After the maximum number of iterations, the optimal laptime and parameters will be printed in your terminal and the optimization will end.
+
+The folder [visualization](./visualization) contains multiple scripts to visualize the performance of the algorithms. One can use the scripts to plot the cumulative regret over time as well as the posterior of the GP.
 
 ## Customization
 The code can be easily customized to work with different MPCs and autonomous systems by changing the YAML files. In some cases, depending on your simulator you might need to change some lines of code.
@@ -63,7 +62,6 @@ The code is set to use default parameters for the SafeOpt algorithm, which can b
 
 <a id="1">[2]</a> 
 	A. Carron, S. Bodmer, L. Vogel, R. Zurbrügg, D. Helm, R. Rickenbach, S. Muntwiler, J. Sieber, and M. N. Zeilinger, [Chronos and crs: Design of a miniature car-like robot and a software framework for single and multi-agent robotics and control](https://arxiv.org/pdf/2209.12048.pdf), ArXiv, vol. abs/2209.12048, 2022.
-
 
 
 ## License

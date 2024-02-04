@@ -1,0 +1,48 @@
+
+# Optimization parameters
+optimization_config:
+  method: "BO"                        # MH: Metropolis Hastings (no constraints), BO: Bayesian Optimization (includes Coat-MPC), CRBO (no constraints)
+  beta: 5.0                           # Param to control exploration-exploitation in UCB
+  acquisition_function: "SAFEOPT"     # EIC: constrained expected improvement,
+                                      # UCB: upper confidence bounds
+                                      # SAFEOPT: Coat MPC. A small amount of params can be tuned (max 2 or 3)
+  standardization_batch: 1000         # Every this number of samples, get new mean and variance to standardize the samples
+  constant_lengthscale: False         # Flag for UCB to keep a constant lengthscale
+  number_bo_restarts: 100             # Number of restarts in the gradient optimization at each iteration
+  raw_samples: 2048                   # Number of raw samples for the torch optimization
+  kernel_lengthscale: 0.1             # Mátern kernel length scale value
+
+  # COAT MPC parameters
+  kernel_variance: .5                 # Kernel variance. This value will be squared
+  gp_variance: 0.2                    # Gaussian process variance. This value will be squared
+  first_lap_multiplier: 1.06          # Multiplier for the coat MPC constraint. f > - multiplier*Ti
+  grid_size: 100                      # In Coat MPC we need to discretize the parameter space. This parameter controls the size of the grid
+  lipschitz_constant: 40.0            # Lipschitz continuity constant
+
+  use_ucb: True
+  prior_mean: True
+  minimum_variance: .18               # Minimum variance for coat MPC. This value will be squared
+
+# Config parameters
+interface_config:
+  simulation: False
+  max_time: 10.0                      # Max time allowed before ending iteration
+  real_penalty_for_max_time: 300      # This value represents the real amount of time that is lost when the car goes out of track / stops
+  max_iterations: 72                  # Max algoritm iterations
+  number_of_laps: 2                   # First lap isn't timed
+  max_deviation: 0.35                 # Max deviation from centerline allowed.
+  use_deviation_penalty: True         # Penalize deviation
+  linear_penalty_slope: .1            # Deviation penalty scaling factor
+  load_prior_data: False              # Set to true to load data from another run
+  optimal_time: 4.5                   # Optimal time of a lap
+
+  prior_data_path: "/code/src/ros4crs/ros_cbo/visualization/objects/26_08_2023_18_21_41/" # Full path to prior data
+
+# Metropolis Hastings config
+metropolis_hastings:
+  sigma: 0.1 # Sigma for the transition model: Gaussian
+
+# Weighted maximum likelihood config
+wml_config:
+  N: 8
+  beta: 5.0

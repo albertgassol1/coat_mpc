@@ -1,0 +1,21 @@
+topics:
+  velocity_estimation: "/car_1/estimation_node/best_state"
+  lap_counter: "/car_1/lap_counter"
+  autotuner_state: "/car_1/curvilinear_state"
+  car_command: "/car_1/control_input"
+  penalty_and_laps: "/car_1/mpc_autotuner/penalty_and_laps"
+  autotuner_go: "/car_1/autotuner_go"
+  track: "/track_info"
+  namespace: "track_center"
+
+simulation:
+  package: "crs_launch"
+  launch: "sim_single_car.launch"
+
+crs:
+  package: "crs_launch"
+  launch: "run_single_car.launch"
+
+frames:
+  world: "world"
+  base_link: "vehicle"
