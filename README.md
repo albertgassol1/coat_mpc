@@ -3,10 +3,10 @@
 This repository contains a Python ROS library that implements Coat-MPC to tune the cost function weights of a Model Predictive Controller (MPC) for an autonomous system. The code uses ROS (Robot Operating System) to communicate with the MPC via dynamic reconfigure. The goal is to minimize the lap time while ensuring that it will always be below a certain threshold. The code of Coat-MPC reuses parts of the code os SafeOpt (https://github.com/befelix/SafeOpt). Furthermore, other methods such as Upper Confidence Bounds (UCB), Constrained Expected Improvement (EIC), Confidence Region BO (code resused from https://github.com/boschresearch/ConfidenceRegionBO), Weighted Maximum Likelihood (WML) and Metropolis-Hastings (MH). The pictures below show a comparison of the different algorithms tested on a real small-scale racing car.
 
 <p align="center">
-  <img src="assets/coat_mpc.png" width="230" />
-  <img src="assets/safeopt_original.png" width="230" />
-  <img src="assets/ucb.png" width="230" />
-  <img src="assets/wml.png" width="230" />
+  <img src="assets/coat_mpc.png" width="400" />
+  <img src="assets/safeopt_original.png" width="400" />
+  <img src="assets/ucb.png" width="400" />
+  <img src="assets/wml.png" width="400" />
 </p>
 
 This library was developed and used to tune the cost function weights of [AMZ](https://www.amzracing.ch/en)'s driverless racing car.
