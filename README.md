@@ -1,8 +1,15 @@
 # Performamce-driven Safe Explration for MPC tuning in autonomous racing
 
-This repository contains a Python ROS library that implements Coat-MPC to tune the cost function weights of a Model Predictive Controller (MPC) for an autonomous system. The code uses ROS (Robot Operating System) to communicate with the MPC via dynamic reconfigure. The goal is to minimize the lap time while ensuring that it will always be below a certain threshold. The code of Coat-MPC reuses parts of the code os SafeOpt (https://github.com/befelix/SafeOpt). Furthermore, other methods such as Upper Confidence Bounds (UCB), Constrained Expected Improvement (EIC), Confidence Region BO (code resused from https://github.com/boschresearch/ConfidenceRegionBO), Weighted Maximum Likelihood (WML) and Metropolis-Hastings (MH).
+This repository contains a Python ROS library that implements Coat-MPC to tune the cost function weights of a Model Predictive Controller (MPC) for an autonomous system. The code uses ROS (Robot Operating System) to communicate with the MPC via dynamic reconfigure. The goal is to minimize the lap time while ensuring that it will always be below a certain threshold. The code of Coat-MPC reuses parts of the code os SafeOpt (https://github.com/befelix/SafeOpt). Furthermore, other methods such as Upper Confidence Bounds (UCB), Constrained Expected Improvement (EIC), Confidence Region BO (code resused from https://github.com/boschresearch/ConfidenceRegionBO), Weighted Maximum Likelihood (WML) and Metropolis-Hastings (MH). The pictures below show a comparison of the different algorithms tested on a real small-scale racing car.
 
-This library was developed and used to tune the cost function weights of AMZ's driverless racing car.
+<p align="center">
+  <img src="assets/coat_mpc.png" width="170" />
+  <img src="assets/safeopt_original.png" width="170" />
+  <img src="assets/ucb.png" width="170" />
+  <img src="assets/wml.png" width="170" />
+</p>
+
+This library was developed and used to tune the cost function weights of [AMZ](https://www.amzracing.ch/en)'s driverless racing car.
 
 Furthermore, it has been tested with a modified version of the  CRS framework: [Chronos and CRS: Design of a miniature car-like robot and a software
 framework for single and multi-agent robotics and control](https://arxiv.org/pdf/2209.12048.pdf) . This framework includes an open source simulator, estimator and MPCC, besides many other functionalities. Code available here: https://gitlab.ethz.ch/ics/crs.
