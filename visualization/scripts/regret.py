@@ -35,9 +35,6 @@ import numpy as np
 import yaml
 from matplotlib import colors
 
-matplotlib.use('TkAgg')
-
-
 def read_object(path: str):
     # Read objects and return them
     with open(path, 'rb') as object_file:
