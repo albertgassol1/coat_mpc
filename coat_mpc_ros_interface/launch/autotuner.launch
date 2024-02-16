@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Launch autotuner node-->
+    <node pkg="coat_mpc_ros_interface" type="main.py" name="coat_mpc_ros_interface" output="screen" launch-prefix=""/>
+</launch>

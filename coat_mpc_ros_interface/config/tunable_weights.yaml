@@ -1,0 +1,14 @@
+# Optimizable weights contains the list of weights we want to optimize, their bounds and their
+# reconfigure name
+weights:
+  - Q1:
+    - lower_bound: 0.0
+    - upper_bound: 1000.0
+    - initial_value: 500.0
+  - Q2:
+    - lower_bound: 0.0
+    - upper_bound: 1000.0
+    - initial_value: 500.0
+
+reconfigure_names:
+    - '/car_1/controller_node'

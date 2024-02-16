@@ -1,4 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-    <node pkg="ros_cbo" type="deviation_penalty.py" name="deviation_penalty" output="screen" launch-prefix="" />
-</launch>

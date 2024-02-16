@@ -1,0 +1,10 @@
+bagpy
+matplotlib
+seaborn
+scipy==1.3.3
+gpytorch==1.6.0
+torch<2.0
+numpy==1.22.2
+botorch==0.6.4
+GPy==1.10.0
+git+https://github.com/befelix/plotting_utilities.git

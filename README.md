@@ -23,7 +23,9 @@ framework for single and multi-agent robotics and control](https://arxiv.org/pdf
 
 4. This library assumes that racing simulator is available. The simulator or a trajectory optimizer must provide information about the track center. For a racing car simulator implementation check https://github.com/AMZ-Driverless/fssim or the CRS implementation.
 
-5. All tests have been performed in an environment where the track is known beforehand (Trackdrive/Skidpad dissiplines in Formula Student Driverless). 
+5. This library assumes that the message coat_mpc car_state is sent by the MPC/state estimator.
+
+6. All tests have been performed in an environment where the track is known beforehand (Trackdrive/Skidpad dissiplines in Formula Student Driverless). 
 
 ## Usage
 1. Clone this repository

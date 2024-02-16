@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="coat_mpc_ros_interface" type="deviation_penalty.py" name="deviation_penalty" output="screen" launch-prefix="" />
+</launch>

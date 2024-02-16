@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>coat_mpc_ros_interface</name>
+    <version>0.0.0</version>
+    <description>Package for the ROS interface of the MPC autotuner</description>
+    <maintainer email="agassol@ethz.ch">Albert</maintainer>
+    <license>MIT</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <buildtool_depend>catkin_simple</buildtool_depend>
+
+    <depend>coat_mpc_msgs</depend>
+    <depend>coat_mpc</depend>
+    <depend>visualization_msgs</depend>
+    <depend>std_msgs</depend>
+    <exec_depend>rospy</exec_depend>
+
+</package>
