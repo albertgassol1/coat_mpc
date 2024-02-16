@@ -71,7 +71,7 @@ class LapCounter:
         Subscribe to necessary topics
         """
         rospy.Subscriber(
-            self.topics.velocity_estimation, car_state, self.callback_state
+            self.topics.state_estimation, car_state, self.callback_state
         )
 
     def callback_state(self, state: car_state) -> None:

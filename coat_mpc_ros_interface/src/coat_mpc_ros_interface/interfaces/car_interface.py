@@ -64,9 +64,9 @@ class CarInterface(BaseInterface):
         """
         rospack = rospkg.RosPack()
         return os.path.join(
-            rospack.get_path(self.config.interfaces.crs_package),
+            rospack.get_path(self.config.interfaces.run_package),
             "launch",
-            self.config.interfaces.crs_launch,
+            self.config.interfaces.run_launch,
         )
 
     def restart(self, lap_time: float, use_lap_time: bool, optimize: bool) -> None:

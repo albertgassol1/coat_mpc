@@ -160,23 +160,20 @@ class AutotunerNode:
             interfaces = yaml.safe_load(interfaces_file)
             topics = interfaces["topics"]
             simulation = interfaces["simulation"]
-            crs = interfaces["crs"]
+            run = interfaces["run"]
 
         return Interfaces(
             Topics(
-                topics["velocity_estimation"],
+                topics["state_estimation"],
                 topics["lap_counter"],
-                topics["autotuner_state"],
-                topics["car_command"],
                 topics["penalty_and_laps"],
-                topics["autotuner_go"],
                 topics["track"],
                 topics["namespace"],
             ),
             simulation["package"],
             simulation["launch"],
-            crs["package"],
-            crs["launch"],
+            run["package"],
+            run["launch"],
         )
 
     @staticmethod

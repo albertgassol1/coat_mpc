@@ -170,7 +170,7 @@ class BaseInterface(ABC):
         )
 
         rospy.Subscriber(
-            self.config.interfaces.topics.velocity_estimation,
+            self.config.interfaces.topics.state_estimation,
             car_state,
             self.callback_state,
             queue_size=1,

@@ -132,12 +132,9 @@ class InterfaceConfig:
 
 @dataclass(frozen=True)
 class Topics:
-    velocity_estimation: str
+    state_estimation: str
     lap_counter: str
-    autotuner_state: str
-    car_command: str
     penalty_and_laps: str
-    autotuner_go: str
     track: str
     track_namespace: str
 
@@ -153,8 +150,8 @@ class Interfaces:
     topics: Topics
     simulation_package: str
     simulation_launch: str
-    crs_package: str
-    crs_launch: str
+    run_package: str
+    run_launch: str
 
 
 @dataclass(frozen=True)

@@ -25,6 +25,6 @@
 
 from .base_interface import BaseInterface
 from .car_interface import CarInterface
-from .crs_sim_interface import CRSSimInterface
+from .sim_interface import SimInterface
 
-interface_dict = {True: CRSSimInterface, False: CarInterface}
+interface_dict = {True: SimInterface, False: CarInterface}

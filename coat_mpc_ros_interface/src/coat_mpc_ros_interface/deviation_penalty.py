@@ -109,12 +109,9 @@ class DeviationPenalty:
             topics = yaml.safe_load(input_file)["topics"]
 
         return Topics(
-            topics["velocity_estimation"],
+            topics["state_estimation"],
             topics["lap_counter"],
-            topics["autotuner_state"],
-            topics["car_command"],
             topics["penalty_and_laps"],
-            topics["autotuner_go"],
             topics["track"],
             topics["namespace"],
         )
@@ -124,7 +121,7 @@ class DeviationPenalty:
         Subscribe to autotuner state and lap counter ROS topics
         """
         rospy.Subscriber(
-            self.topics.velocity_estimation, car_state, self.callback_state
+            self.topics.state_estimation, car_state, self.callback_state
         )
         rospy.Subscriber(self.topics.lap_counter, Int32, self.callback_lap_counter)
         rospy.Subscriber(self.topics.track, Marker, self.callback_track)

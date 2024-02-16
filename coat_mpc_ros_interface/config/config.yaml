@@ -35,7 +35,7 @@ interface_config:
   load_prior_data: False              # Set to true to load data from another run
   optimal_time: 4.5                   # Optimal time of a lap
 
-  prior_data_path: "/code/src/ros4crs/ros_mpc_autotuner/visualization/objects/26_08_2023_18_21_41/" # Full path to prior data
+  prior_data_path: "" # Full path to prior data
 
 # Metropolis Hastings config
 metropolis_hastings:

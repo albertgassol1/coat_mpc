@@ -44,7 +44,7 @@ from coat_mpc.utils.dataclasses import Config, TunableWeights
 from coat_mpc_ros_interface.interfaces.base_interface import BaseInterface
 
 
-class CRSSimInterface(BaseInterface):
+class SimInterface(BaseInterface):
     def __init__(self, config: Config, tunable_weights: TunableWeights) -> None:
         """
         Simulator interface. Handle simulation and trigger optimization
