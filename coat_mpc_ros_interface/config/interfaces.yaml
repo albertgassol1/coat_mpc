@@ -1,7 +1,7 @@
 topics:
   state_estimation: "/coat_mpc/state_estimation"
   lap_counter: "/coat_mpc/lap_counter"
-  penalty_and_laps: "/car_1/mpc_autotuner/penalty_and_laps"
+  penalty_and_laps: "/coat_mpc/penalty_and_laps"
   track: "/track_info"
   namespace: "track_center"
 
