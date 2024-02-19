@@ -45,9 +45,9 @@ Make sure that the ROS environment is set up and that the ROS master is running.
 
 ## Run the code
 
-Include this package into your ROS workspace. Build everything and run:
+Include this package into your ROS workspace. Build everything(```catkin build coat_mpc*```) and run:
 ```bash
-roslaunch ros_cbo autotuner.launch
+roslaunch coat_mpc_ros_interface autotuner.launch
 ```
 
 The code will start communicating with the MPC via dynamic reconfigure and start tuning the cost function weights.
