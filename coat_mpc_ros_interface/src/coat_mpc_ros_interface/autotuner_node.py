@@ -189,15 +189,21 @@ class AutotunerNode:
 
         weights = tunable_weights["weights"]
 
-        names: List[np.ndarray] = list()
-        lower_bounds: List[np.ndarray] = list()
-        upper_bounds: List[np.ndarray] = list()
-        initial_values: List[np.ndarray] = list()
+        names: List[str] = list()
+        lower_bounds: List[float] = list()
+        upper_bounds: List[float] = list()
+        initial_values: List[float] = list()
         for name, params in weights.items():
-            names.append(np.asarray(name, dtype=str))
-            lower_bounds.append(np.asarray(params["lower_bound"], dtype=np.float64))
-            upper_bounds.append(np.asarray(params["upper_bound"], dtype=np.float64))
-            initial_values.append(np.asarray(params["initial_value"], dtype=np.float64))
+            names.append(name)
+            lower_bounds.append(params["lower_bound"])
+            upper_bounds.append(params["upper_bound"])
+            initial_values.append(params["initial_value"])
+
+        names = [np.asarray(names, dtype=str)]
+        lower_bounds = [np.asarray(lower_bounds, dtype=np.float64)]
+        upper_bounds = [np.asarray(upper_bounds, dtype=np.float64)]
+        initial_values = [np.asarray(initial_values, dtype=np.float64)]
+
         reconfigure_names = tunable_weights["reconfigure_names"]
 
         return TunableWeights(
