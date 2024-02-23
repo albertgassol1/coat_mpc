@@ -127,7 +127,7 @@ class SimInterface(BaseInterface):
         if self.vel_est_counter >= 10000:
             rospy.logwarn("CAR STUCK BEFORE STARTING! RESTARTING SIMULATION")
             self.iterations += 1
-            self.restart_simulation(-1, False, True)
+            self.restart(-1, False, True)
 
         # Check vehicle status
         self.check_status(vel_est.vx, vel_est.vy)
@@ -150,7 +150,7 @@ class SimInterface(BaseInterface):
             rospy.logwarn("CAR OUT OF TRACK! RESTART SIMULATION")
             self.mpc_interface.reset_constraints()
             self.iterations += 1
-            self.restart_simulation(-1, False, True)
+            self.restart(-1, False, True)
             return
 
         # Check time
@@ -163,7 +163,7 @@ class SimInterface(BaseInterface):
         if elapsed_time > self.config.interface_config.max_time:
             rospy.logwarn("MAX LAP_TIME REACHED! RESTART SIMULATION")
             self.iterations += 1
-            self.restart_simulation(-1, False, True)
+            self.restart(-1, False, True)
             return
 
         # Check velocity
@@ -175,7 +175,7 @@ class SimInterface(BaseInterface):
         ):
             rospy.logwarn("CAR STUCK! RESTART SIMULATION")
             self.iterations += 1
-            self.restart_simulation(-1, False, True)
+            self.restart(-1, False, True)
 
     def get_lap_time_and_reset(self) -> float:
         """
