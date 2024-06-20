@@ -14,6 +14,9 @@ This library was developed and used to tune the cost function weights of [AMZ](h
 Furthermore, it has been tested with a modified version of the  CRS framework: [Chronos and CRS: Design of a miniature car-like robot and a software
 framework for single and multi-agent robotics and control](https://arxiv.org/pdf/2209.12048.pdf) . This framework includes an open source simulator, estimator and MPCC, besides many other functionalities. Code available here: https://gitlab.ethz.ch/ics/crs.
 
+## Results Video
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Ep_BX3BDaeU/0.jpg)](https://www.youtube.com/watch?v=Ep_BX3BDaeU)
+
 ## Requirements
 1. [ROS](https://wiki.ros.org/noetic) (Tested on version Noetic)
 
