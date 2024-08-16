@@ -76,7 +76,7 @@ The code is set to use default parameters for the SafeOpt algorithm, which can b
 	A. Carron, S. Bodmer, L. Vogel, R. Zurbrügg, D. Helm, R. Rickenbach, S. Muntwiler, J. Sieber, and M. N. Zeilinger. Chronos and crs: Design of a miniature car-like robot and a software framework for single and multi-agent robotics and control. ICRA, 2023.
 
   <a id="1">[3]</a> 
-	Lukas P. Frohlich and Melanie Nicole Zeilinger and Edgar D. Klenske. Chronos and crs: Cautious Bayesian Optimization for Efficient and Scalable Policy Search. CLDC, 2020.
+	Lukas P. Frohlich and Melanie Nicole Zeilinger and Edgar D. Klenske. Cautious Bayesian Optimization for Efficient and Scalable Policy Search. CLDC, 2020.
 
 ## License
 This code is released under the MIT License and free to use by anyone without any restrictions.
