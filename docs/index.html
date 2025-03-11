@@ -120,8 +120,8 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/lipschitz_demo.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-justified">
+      <img src="static/images/lipschitz_demo.jpg" alt=""/>
+        <h2 class="content has-text-justified">
           COAt-MPC explores the space of MPC cost function parameters and builds a belief about the a-priori unknown performance function through data, utilizing tools from Gaussian processes. COAt-MPC incorporates safe exploration ideas and recursively recommends sufficiently informative parameters that ensure exploration while satisfying the performance constraint.  We establish convergence guarantees to the optimal tuning parameters in a finite number of samples while ensuring performance constraint satisfaction with an arbitrarily high probability. For finite time convergence, we present a sample complexity bound and demonstrate its applicability with discrete set operators required for discrete domains. In particular, our sample complexity result removes an explicit dependence on the discretization step size and thus significantly improves prior safe exploration results in discrete domains. Additionally,  we demonstrate the effectiveness of COAt-MPC in the application of autonomous racing. We tune a Model Predictive Contouring Control formulation with the objective of optimizing the lap time while avoiding undesirable effects such as halting. Our evaluation includes a comprehensive analysis in both simulation and in experiments on a 1:28 scale RC racecar.
         </h2>
     </div>
@@ -146,23 +146,45 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Teaser video-->
-<section class="hero teaser">
+<!-- Paper Method -->
+<section class="section hero">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="title is-3">RC racecar results</h2>
-      <iframe
-        width="800px" 
-        height="400px"  
-        src="https://www.youtube.com/embed/Ep_BX3BDaeU?autoplay=1&mute=1&loop=1&playlist=Ep_BX3BDaeU" 
-        title="COAt-MPC" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-      </iframe>
-      <h2 class="subtitle has-text-centered">
-        COAt-MPC demo on a small scalle RC race car.  
-      </h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <img src="static/images/coat_mpc_example.png" alt=""/>
+        <div class="content has-text-justified">
+          <p>
+            Our approach leverages the assumption of Lipschitz continuity in the objective function to construct pessimistic and optimistic constraint sets. We use the optimistic set to define a goal location at each iteration, while we restrict our recommendations to be within the pessimistic set. We present a theoretical analysis of our method, conclusively demonstrating its ability to achieve optimal tuning parameters in finite time while guaranteeing the satisfaction of the performance constraint with arbitrarily high probability.
+
+            Our algorithm’s goal is (i) to ensure the performance constraint satisfaction while (ii) converging to the optimal cost function weights with few tuning iterations. For the former part (i), we sample weights from the constructed pessimistic set, which guarantees satisfying the constraint with high probability. To ensure the later part (ii), we set a goal in the constructed optimistic set, outside of which the weights do not satisfy the constraint. Additionally, to converge to the optimal weights with fewer tuning iterations, we employ a goal-directed approach and use an expansion method towards this goal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper Method -->
+
+<!-- Teaser video-->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered"></div>
+      <div class="hero-body">
+        <h2 class="title is-3">RC racecar results</h2>
+        <iframe
+          width="800px" 
+          height="400px"  
+          src="https://www.youtube.com/embed/Ep_BX3BDaeU?autoplay=1&mute=1&loop=1&playlist=Ep_BX3BDaeU" 
+          title="COAt-MPC" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+        <h2 class="subtitle has-text-centered">
+          COAt-MPC demo on a small scalle RC race car.  
+        </h2>
+      </div>
     </div>
   </div>
 </section>
