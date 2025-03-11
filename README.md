@@ -13,7 +13,7 @@
     <a href="https://idsc.ethz.ch/research-zeilinger/people/person-detail.MTQyNzM3.TGlzdC8xOTI5LDg4NTM5MTE3.html">Melanie N. Zeilinger</a>
 
   </p>
-  <h3 align="center"><a href="https://arxiv.org/abs/2503.07127v1">Paper (IEEE RA-L 2025)</a></h3>
+  <h3 align="center"><a href="https://arxiv.org/abs/2503.07127v1">Paper (IEEE RA-L 2025)</a> | <a href="[https://niujinshuchong.github.io/monosdf/](https://albertgassol1.github.io/coat_mpc/)">Project Page</a> </h3>
   <div align="center"></div>
 </p>
 Official implementation of COAt-MPC. COAt-MPC automatically tunes a Model Predictive Controller (MPC) 's cost function weights while always satisfying a performance constraint with high probability. The code of COATt-MPC reuses parts of the code of SafeOpt (https://github.com/befelix/SafeOpt). Furthermore, other methods such as Upper Confidence Bounds (UCB), Constrained Expected Improvement (EIC), Confidence Region BO (code reused from https://github.com/boschresearch/ConfidenceRegionBO), Weighted Maximum Likelihood (WML) and Metropolis-Hastings (MH). The pictures below show a comparison of the different algorithms tested on a real small-scale racing car.
