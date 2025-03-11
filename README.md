@@ -87,7 +87,7 @@ The code is set to use default parameters for the SafeOpt algorithm, which can b
 If you find our method useful for your research, please consider citing us with the following.
 
 ```
-@article{puigjaner1015coatmpc,
+@article{puigjaner2015coatmpc,
   title={COAt-MPC: Performance-driven Constrained Optimal Auto-Tuner for MPC},
   author={Gassol Puigjaner, Albert and Prajapat, Manish and Carron, Andrea and Krause, Andreas and Zeilinger, Melanie N},
   journal={IEEE Robotics and Automation Letters},
