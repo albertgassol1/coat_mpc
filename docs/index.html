@@ -116,13 +116,42 @@
   </div>
 </section>
 
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/lipschitz_demo.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          COAt-MPC explores the space of MPC cost function parameters and builds a belief about the a-priori unknown performance function through data, utilizing tools from Gaussian processes. COAt-MPC incorporates safe exploration ideas and recursively recommends sufficiently informative parameters that ensure exploration while satisfying the performance constraint.  We establish convergence guarantees to the optimal tuning parameters in a finite number of samples while ensuring performance constraint satisfaction with an arbitrarily high probability. For finite time convergence, we present a sample complexity bound and demonstrate its applicability with discrete set operators required for discrete domains. In particular, our sample complexity result removes an explicit dependence on the discretization step size and thus significantly improves prior safe exploration results in discrete domains. Additionally,  we demonstrate the effectiveness of COAt-MPC in the application of autonomous racing. We tune a Model Predictive Contouring Control formulation with the objective of optimizing the lap time while avoiding undesirable effects such as halting. Our evaluation includes a comprehensive analysis in both simulation and in experiments on a 1:28 scale RC racecar.
+        </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            A key challenge in tuning Model Predictive Control (MPC) cost function parameters is to ensure that the system performance stays consistently above a certain threshold. To address this challenge, we propose a novel method, COAt-MPC, Constrained Optimal Auto-Tuner for MPC. With every tuning iteration, COAt-MPC gathers performance data and learns by updating its posterior belief.  It explores the tuning parameters' domain towards optimistic parameters in a goal-directed fashion, which is key to its sample efficiency.  We theoretically analyze COAt-MPC, showing that it satisfies performance constraints with arbitrarily high probability at all times and provably converges to the optimum performance within finite time. Through comprehensive simulations and comparative analyses with a hardware platform, we demonstrate the effectiveness of COAt-MPC in comparison to classical Bayesian Optimization (BO) and other state-of-the-art methods. When applied to autonomous racing, our approach outperforms baselines in terms of constraint violations and cumulative regret over time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <iframe 
-        width="800px" 
+        width="1000px" 
         height="400px" 
         src="https://www.youtube.com/embed/Ep_BX3BDaeU?autoplay=1&mute=1&loop=1&playlist=Ep_BX3BDaeU" 
         title="COAt-MPC" 
@@ -137,23 +166,6 @@
   </div>
 </section>
 <!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
 
 
 <!-- Image carousel -->
