@@ -13,7 +13,7 @@
     <a href="https://idsc.ethz.ch/research-zeilinger/people/person-detail.MTQyNzM3.TGlzdC8xOTI5LDg4NTM5MTE3.html">Melanie N. Zeilinger</a>
 
   </p>
-  <h3 align="center"><a href="https://arxiv.org/abs/2503.07127v1">Paper</a></h3>
+  <h3 align="center"><a href="https://arxiv.org/abs/2503.07127v1">Paper (IEEE RA-L 2025)</a></h3>
   <div align="center"></div>
 </p>
 Official implementation of COAt-MPC. COAt-MPC automatically tunes a Model Predictive Controller (MPC) 's cost function weights while always satisfying a performance constraint with high probability. The code of COATt-MPC reuses parts of the code of SafeOpt (https://github.com/befelix/SafeOpt). Furthermore, other methods such as Upper Confidence Bounds (UCB), Constrained Expected Improvement (EIC), Confidence Region BO (code reused from https://github.com/boschresearch/ConfidenceRegionBO), Weighted Maximum Likelihood (WML) and Metropolis-Hastings (MH). The pictures below show a comparison of the different algorithms tested on a real small-scale racing car.
@@ -81,9 +81,19 @@ The folder [visualization](./coat_mpc_ros_interface/visualization/) contains mul
 The code can be easily customized to work with different MPCs and autonomous systems by changing the YAML files. In some cases, depending on your simulator you might need to change some lines of code.
 
 ## Notes
-
 The code is set to use default parameters for the SafeOpt algorithm, which can be adjusted as needed in the [config/config.yaml](./coat_mpc_ros_interface/config/config.yaml) file.
 
+## Citation
+If you find our method useful for your research, please consider citing us with the following.
+
+```
+@article{puigjaner1015coatmpc,
+  title={COAt-MPC: Performance-driven Constrained Optimal Auto-Tuner for MPC},
+  author={Gassol Puigjaner, Albert and Prajapat, Manish and Carron, Andrea and Krause, Andreas and Zeilinger, Melanie N},
+  journal={IEEE Robotics and Automation Letters},
+  year={2025}
+}
+```
 
 ## License
 This code is released under the MIT License and is free to use by anyone without any restrictions.
