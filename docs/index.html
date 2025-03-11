@@ -116,18 +116,18 @@
   </div>
 </section>
 
-<!-- Teaser video-->
+<!-- Lipschitz figure-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="static/images/lipschitz_demo.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
+        <h2 class="subtitle has-text-justified">
           COAt-MPC explores the space of MPC cost function parameters and builds a belief about the a-priori unknown performance function through data, utilizing tools from Gaussian processes. COAt-MPC incorporates safe exploration ideas and recursively recommends sufficiently informative parameters that ensure exploration while satisfying the performance constraint.  We establish convergence guarantees to the optimal tuning parameters in a finite number of samples while ensuring performance constraint satisfaction with an arbitrarily high probability. For finite time convergence, we present a sample complexity bound and demonstrate its applicability with discrete set operators required for discrete domains. In particular, our sample complexity result removes an explicit dependence on the discretization step size and thus significantly improves prior safe exploration results in discrete domains. Additionally,  we demonstrate the effectiveness of COAt-MPC in the application of autonomous racing. We tune a Model Predictive Contouring Control formulation with the objective of optimizing the lap time while avoiding undesirable effects such as halting. Our evaluation includes a comprehensive analysis in both simulation and in experiments on a 1:28 scale RC racecar.
         </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- Lipschitz figure -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -150,9 +150,8 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+      <h2 class="title is-3">RC racecar results</h2>
       <iframe 
-        width="1000px" 
-        height="400px" 
         src="https://www.youtube.com/embed/Ep_BX3BDaeU?autoplay=1&mute=1&loop=1&playlist=Ep_BX3BDaeU" 
         title="COAt-MPC" 
         frameborder="0" 
@@ -168,127 +167,16 @@
 <!-- End teaser video -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{puigjaner2015coatmpc,
+        title={COAt-MPC: Performance-driven Constrained Optimal Auto-Tuner for MPC},
+        author={Gassol Puigjaner, Albert and Prajapat, Manish and Carron, Andrea and Krause, Andreas and Zeilinger, Melanie N},
+        journal={IEEE Robotics and Automation Letters},
+        year={2025}
+      }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
