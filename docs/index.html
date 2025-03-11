@@ -147,18 +147,16 @@
 <!-- End paper abstract -->
 
 <!-- Paper Method -->
-<section class="section hero">
+<section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
+    <div class="hero-body">
       <h2 class="title is-3">Method</h2>
       <img src="static/images/coat_mpc_example.png" alt=""/>
-      <div class="content has-text-justified">
-        <p>
+        <h2 class="content has-text-justified">
           Our approach leverages the assumption of Lipschitz continuity in the objective function to construct pessimistic and optimistic constraint sets. We use the optimistic set to define a goal location at each iteration, while we restrict our recommendations to be within the pessimistic set. We present a theoretical analysis of our method, conclusively demonstrating its ability to achieve optimal tuning parameters in finite time while guaranteeing the satisfaction of the performance constraint with arbitrarily high probability.
 
           Our algorithm’s goal is (i) to ensure the performance constraint satisfaction while (ii) converging to the optimal cost function weights with few tuning iterations. For the former part (i), we sample weights from the constructed pessimistic set, which guarantees satisfying the constraint with high probability. To ensure the later part (ii), we set a goal in the constructed optimistic set, outside of which the weights do not satisfy the constraint. Additionally, to converge to the optimal weights with fewer tuning iterations, we employ a goal-directed approach and use an expansion method towards this goal.
-        </p>
-      </div>
+        </h2>
     </div>
   </div>
 </section>
